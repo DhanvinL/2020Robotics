@@ -26,5 +26,6 @@ public final class Constants
 	public static final int INTAKE_OUT_BUTTON = 0;
 	public static final int INTAKE_IN_SPEED = (int) 0.5;
 	public static final int INTAKE_OUT_SPEED = (int) -0.8;
+	public static final Object Hatch_PCM = null;
     
 }
