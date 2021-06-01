@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.commands.DriveWithJoystick;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.MoveHatch;
 import frc.robot.commands.MoveIntake;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.ExampleSubsystem;
@@ -80,10 +81,11 @@ public class RobotContainer {
     joy = new Joystick(0);
     intakeIn = new JoystickButton(joy, Constants.INTAKE_IN_BUTTON);
     intakeOut = new JoystickButton(joy, Constants.INTAKE_OUT_BUTTON);
+    hatch = new JoystickButton(joy, Constants.HATCH_MOVE_BUTTON);
 
     intakeIn.whileHeld(new MoveIntake(Constants.INTAKE_IN_SPEED));
     intakeOut.whenHeld(new MoveIntake(Constants.INTAKE_OUT_SPEED));
-
+    hatch.whileHeld(new MoveHatch(hatch));
   }
 
   /**

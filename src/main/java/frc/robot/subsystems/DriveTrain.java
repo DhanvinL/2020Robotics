@@ -13,10 +13,10 @@ public class DriveTrain extends SubsystemBase
     private  SpeedControllerGroup left, right;
     private  DifferentialDrive drive;
 
-    public DriveTrain(SpeedControllerGroup left, SpeedControllerGroup right, DifferentialDrive drive)
+    public DriveTrain(SpeedController left2, SpeedController right2, DifferentialDrive drive)
          {
-        this.left = left;
-        this.right = right;
+        this.left = (SpeedControllerGroup) left2;
+        this.right = (SpeedControllerGroup) right2;
         this.drive = drive;
 
     }
